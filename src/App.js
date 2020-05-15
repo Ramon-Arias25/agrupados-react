@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
-//import { HashRouter, Route, Switch } from 'react-router-dom';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
-import { Container } from 'reactstrap';
-import Login from './views/login/Login'
-
+import {BrowserRouter, Route} from 'react-router-dom'
+//Component
+import Login from './views/login';
+import Register from './views/Register';
+import './App.scss';
 class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <Container>
-          <div>
-            <h1>Agrupados</h1>
-            <Link to="/login">Login</Link>
-            <Route path="/login" component={Login}/>
-          </div>
-        </Container>
-      </BrowserRouter>
+      <BrowserRouter>      
+      <div className="container p-4">
+        <Route path="/" exact component={Login} /> 
+        <Route path="/Register" exact component={Register} />
+      </div>
+    </BrowserRouter>
     );
   }
 }
