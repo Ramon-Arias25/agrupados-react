@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route} from 'react-router-dom'
 //Component
-import Login from './views/login';
-import Register from './views/Register';
+import Login from './views/login/Login';
+import Register from './views/Register/Register';
 import './App.scss';
 class App extends Component {
 
